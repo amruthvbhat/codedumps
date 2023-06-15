@@ -1,0 +1,528 @@
+// Animal.java file
+// public class
+public class Animal {
+    // public variable
+    public int legCount;
+
+    // public method
+    public void display() {
+        System.out.println("I am an animal.");
+        System.out.println("I have " + legCount + " legs.");
+    }
+}
+
+// Main.java
+public class Main {
+    public static void main( String[] args ) {
+        // accessing the public class
+        Animal animal = new Animal();
+
+        // accessing the public variable
+        animal.legCount = 4;
+        // accessing the public method
+        animal.display();
+    }
+}
+
+
+
+package javasample.OO1;
+
+class Example1_Java_Methods {
+
+	  // create a method
+	  public int addNumbers(int a, int b) {
+	    int sum = a + b;
+	    // return value
+	    return sum;
+	  }
+
+	  public static void main(String[] args) {
+	    
+	    int num1 = 25;
+	    int num2 = 15;
+
+	    // create an object of Main
+	    Example1_Java_Methods obj = new Example1_Java_Methods();
+	    // calling method
+	    int result = obj.addNumbers(num1, num2);
+	    System.out.println("Sum is: " + result);
+	  }
+	}
+
+
+
+package javasample.OO1;
+
+public class Example2_Method_Return_Type {
+
+		// create a method
+		  public static int square(int num) {
+
+		    // return statement
+		    return num * num;
+		  }
+
+		  public static void main(String[] args) {
+		    int result;
+
+		    // call the method
+		    // store returned value to result
+		    result = square(10);
+
+		    System.out.println("Squared value of 10 is: " + result);
+		  }
+		
+
+}
+
+
+
+package javasample.OO1;
+
+public class Example3_Method_Parameters {
+
+
+		  // method with no parameter
+		  public void display1() {
+		    System.out.println("Method without parameter");
+		  }
+
+		  // method with single parameter
+		  public void display2(int a) {
+		    System.out.println("Method with a single parameter: " + a);
+		  }
+
+		  public static void main(String[] args) {
+		    
+		    // create an object of Main
+			  Example3_Method_Parameters obj = new Example3_Method_Parameters();
+
+		    // calling method with no parameter
+		    obj.display1();
+		    
+		    // calling method with the single parameter
+		    obj.display2(24);
+		  }
+		}
+
+
+
+package javasample.OO1;
+
+public class Example4_Java_Standard_Library_Method {
+	
+		  public static void main(String[] args) {
+		    
+		    // using the sqrt() method
+		    System.out.print("Square root of 4 is: " + Math.sqrt(4));
+		  }
+		}
+
+
+
+package javasample.OO1;
+
+public class Example5_Java_Method_for_Code_Reusability {
+
+		  // method defined
+		  private static int getSquare(int x){
+		    return x * x;
+		  }
+
+		  public static void main(String[] args) {
+		    for (int i = 1; i <= 5; i++) {
+
+		      // method call
+		      int result = getSquare(i);
+		      System.out.println("Square of " + i + " is: " + result);
+		    }
+		  }
+		
+}
+package javasample.OO1;
+
+public class Example5_Java_Method_for_Code_Reusability {
+
+		  // method defined
+		  private static int getSquare(int x){
+		    return x * x;
+		  }
+
+		  public static void main(String[] args) {
+		    for (int i = 1; i <= 5; i++) {
+
+		      // method call
+		      int result = getSquare(i);
+		      System.out.println("Square of " + i + " is: " + result);
+		    }
+		  }
+		
+}
+
+
+package javasample.OO1;
+
+public class Java_Constructor_Overloading {
+
+		  String language;
+
+		  // constructor with no parameter
+		  Java_Constructor_Overloading() {
+		    this.language = "Java";
+		  }
+
+		  // constructor with a single parameter
+		  Java_Constructor_Overloading(String language) {
+		    this.language = language;
+		  }
+
+		  public void getName() {
+		    System.out.println("Programming Langauage: " + this.language);
+		  }
+
+		  public static void main(String[] args) {
+
+		    // call constructor with no parameter
+			  Java_Constructor_Overloading obj1 = new Java_Constructor_Overloading();
+
+		    // call constructor with a single parameter
+			  Java_Constructor_Overloading obj2 = new Java_Constructor_Overloading("Python");
+
+		    obj1.getName();
+		    obj2.getName();
+		  }
+		
+}
+package javasample.OO1;
+
+public class Java_Constructor_Overloading {
+
+		  String language;
+
+		  // constructor with no parameter
+		  Java_Constructor_Overloading() {
+		    this.language = "Java";
+		  }
+
+		  // constructor with a single parameter
+		  Java_Constructor_Overloading(String language) {
+		    this.language = language;
+		  }
+
+		  public void getName() {
+		    System.out.println("Programming Langauage: " + this.language);
+		  }
+
+		  public static void main(String[] args) {
+
+		    // call constructor with no parameter
+			  Java_Constructor_Overloading obj1 = new Java_Constructor_Overloading();
+
+		    // call constructor with a single parameter
+			  Java_Constructor_Overloading obj2 = new Java_Constructor_Overloading("Python");
+
+		    obj1.getName();
+		    obj2.getName();
+		  }
+		
+}
+
+
+package javasample.OO1;
+
+public class Java_Constructor {
+
+		  private String name;
+
+		  // constructor
+		  Java_Constructor() {
+		    System.out.println("Constructor Called:");
+		    name = "Programiz";
+		  }
+
+		  public static void main(String[] args) {
+
+		    // constructor is invoked while
+		    // creating an object of the Main class
+			  Java_Constructor obj = new Java_Constructor();
+		    System.out.println("The name is " + obj.name);
+		  }
+		
+}
+
+
+package javasample.OO1;
+
+public class Java_Default_Constructor {
+	
+		  int a;
+		  boolean b;
+
+		  public static void main(String[] args) {
+
+		    // A default constructor is called
+			  Java_Default_Constructor obj = new Java_Default_Constructor();
+
+		    System.out.println("Default Value:");
+		    System.out.println("a = " + obj.a);
+		    System.out.println("b = " + obj.b);
+		  }
+		
+}
+package javasample.OO1;
+
+public class Java_Default_Constructor {
+	
+		  int a;
+		  boolean b;
+
+		  public static void main(String[] args) {
+
+		    // A default constructor is called
+			  Java_Default_Constructor obj = new Java_Default_Constructor();
+
+		    System.out.println("Default Value:");
+		    System.out.println("a = " + obj.a);
+		    System.out.println("b = " + obj.b);
+		  }
+		
+}
+
+
+package javasample.OO1;
+
+public class Java_Methods {
+
+
+		  // create a method
+		  public int addNumbers(int a, int b) {
+		    int sum = a + b;
+		    // return value
+		    return sum;
+		  }
+
+		  public static void main(String[] args) {
+		    
+		    int num1 = 25;
+		    int num2 = 15;
+
+		    // create an object of Main
+		    Java_Methods obj = new Java_Methods();
+		    // calling method
+		    int result = obj.addNumbers(num1, num2);
+		    System.out.println("Sum is: " + result);
+		  }
+		}
+
+
+package javasample.OO1;
+
+public class Java_private_noarg_constructor {
+
+		  int i;
+
+		  // constructor with no parameter
+		  private Java_private_noarg_constructor() {
+		    i = 5;
+		    System.out.println("Constructor is called");
+		  }
+
+		  public static void main(String[] args) {
+
+		    // calling the constructor without any parameter
+			  Java_private_noarg_constructor obj = new Java_private_noarg_constructor();
+		    System.out.println("Value of i: " + obj.i);
+		  }
+		
+}
+
+
+package javasample.OO1;
+
+public class Java_public_noarg_constructors {
+	
+
+		  int i;
+
+		  // constructor with no parameter
+		  private Java_public_noarg_constructors() {
+		    i = 5;
+		    System.out.println("Constructor is called");
+		  }
+
+		  public static void main(String[] args) {
+
+		    // calling the constructor without any parameter
+			  Java_public_noarg_constructors obj = new Java_public_noarg_constructors();
+		    System.out.println("Value of i: " + obj.i);
+		  }
+		
+}
+
+
+package javasample.OO1;
+
+class Lamp {
+  
+  // stores the value for light
+  // true if light is on
+  // false if light is off
+  boolean isOn;
+
+  // method to turn on the light
+  void turnOn() {
+    isOn = true;
+    System.out.println("Light on? " + isOn);
+
+  }
+
+  // method to turnoff the light
+  void turnOff() {
+    isOn = false;
+    System.out.println("Light on? " + isOn);
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+
+    // create objects led and halogen
+    Lamp led = new Lamp();
+    Lamp halogen = new Lamp();
+
+    // turn on the light by
+    // calling method turnOn()
+    led.turnOn();
+
+    // turn off the light by
+    // calling method turnOff()
+    halogen.turnOff();
+  }
+}
+
+
+package javasample.OO1;
+
+public class Method_Parameters {
+
+		  // method with no parameter
+		  public void display1() {
+		    System.out.println("Method without parameter");
+		  }
+
+		  // method with single parameter
+		  public void display2(int a) {
+		    System.out.println("Method with a single parameter: " + a);
+		  }
+
+		  public static void main(String[] args) {
+		    
+		    // create an object of Main
+			  Method_Parameters obj = new Method_Parameters();
+
+		    // calling method with no parameter
+		    obj.display1();
+		    
+		    // calling method with the single parameter
+		    obj.display2(24);
+		  }
+		
+}
+
+
+
+package javasample.OO1;
+
+public class Method_Return_Type {
+
+		// create a method
+		  public static int square(int num) {
+
+		    // return statement
+		    return num * num;
+		  }
+
+		  public static void main(String[] args) {
+		    int result;
+
+		    // call the method
+		    // store returned value to result
+		    result = square(10);
+
+		    System.out.println("Squared value of 10 is: " + result);
+		  }
+		}
+
+
+
+
+package javasample.OO1;
+
+public class Parameterized_constructor {
+
+		  String languages;
+
+		  // constructor accepting single value
+		  Parameterized_constructor(String lang) {
+		    languages = lang;
+		    System.out.println(languages + " Programming Language");
+		  }
+
+		  public static void main(String[] args) {
+
+		    // call constructor by passing a single value
+			  Parameterized_constructor obj1 = new Parameterized_constructor("Java");
+			  Parameterized_constructor obj2 = new Parameterized_constructor("Python");
+			  Parameterized_constructor obj3 = new Parameterized_constructor("C");
+		  }
+		
+}
+
+
+
+package javasample.OO1;
+
+class Data {
+    // private variable
+    private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+}
+
+public class Private_Access_Modifier {
+    public static void main(String[] main){
+
+        // create an object of Data
+        Data d = new Data();
+
+        // access private variable and field from another class
+        d.setName("Programiz");
+    }
+}
+
+package javasample.OO1;
+
+class Animal {
+    // protected method
+    protected void display() {
+        System.out.println("I am an animal");
+    }
+}
+
+class Dog extends Animal {
+    public static void main(String[] args) {
+
+        // create an object of Dog class
+        Dog dog = new Dog();
+         // access protected method
+        dog.display();
+    }
+}
+
