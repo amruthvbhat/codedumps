@@ -1,0 +1,452 @@
+package javasample.OO2;
+
+class Animal6 {
+	   protected void displayInfo() {
+	      System.out.println("I am an animal.");
+	   }
+	}
+
+	class Dog6 extends Animal6 {
+	   public void displayInfo() {
+	      System.out.println("I am a dog.");
+	   }
+	}
+
+	class Access_Specifier_Overriding
+	{public static void main(String[] args) {
+	      Dog6 d1 = new Dog6();
+	      d1.displayInfo();
+	   }
+	}
+
+
+package javasample.OO2;
+
+
+	class Animal {
+
+		  // field and method of the parent class
+		  String name;
+		  public void eat() {
+		    System.out.println("I can eat");
+		  }
+		}
+
+		// inherit from Animal
+		class Dog extends Animal {
+
+		  // new method in subclass
+		  public void display() {
+		    System.out.println("My name is " + name);
+		  }
+		}
+
+		class Java_Inheritance {
+		  public static void main(String[] args) {
+
+		    // create an object of the subclass
+		    Dog labrador = new Dog();
+
+		    // access field of superclass
+		    labrador.name = "Rohu";
+		    labrador.display();
+
+		    // call method of superclass
+		    // using object of subclass
+		    labrador.eat();
+
+		  }
+		}
+
+
+
+
+package javasample.OO2;
+
+class Polygon {
+
+	  // method to render a shape
+	  public void render() {
+	    System.out.println("Rendering Polygon...");
+	  }
+	}
+
+	class Square extends Polygon {
+
+	  // renders Square
+	  public void render() {
+	    System.out.println("Rendering Square...");
+	  }
+	}
+
+	class Circle extends Polygon {
+
+	  // renders circle
+	  public void render() {
+	    System.out.println("Rendering Circle...");
+	  }
+	}
+
+	class JavaPolymorphism {
+	  public static void main(String[] args) {
+	    
+	    // create an object of Square
+	    Square s1 = new Square();
+	    s1.render();
+
+	    // create an object of Circle
+	    Circle c1 = new Circle();
+	    c1.render();
+	  }
+	}
+	
+	package javasample.OO2;
+
+class Animal1 {
+
+	  // method in the superclass
+	  public void eat() {
+	    System.out.println("I can eat");
+	  }
+	}
+
+	// Dog inherits Animal
+	class Dog1 extends Animal1 {
+
+	  // overriding the eat() method
+	  @Override
+	  public void eat() {
+	    System.out.println("I eat dog food");
+	  }
+
+	  // new method in subclass
+	  public void bark() {
+	    System.out.println("I can bark");
+	  }
+	}
+
+	class Method_overriding_Java_Inheritance {
+	  public static void main(String[] args) {
+
+	    // create an object of the subclass
+	    Dog1 labrador = new Dog1();
+
+	    // call the eat() method
+	    labrador.eat();
+	    labrador.bark();
+	  }
+	}
+	
+	package javasample.OO2;
+
+class Animal4 {
+	   public void displayInfo() {
+	      System.out.println("I am an animal.");
+	   }
+	}
+
+	class Dog4 extends Animal4 {
+	   @Override
+	   public void displayInfo() {
+	      System.out.println("I am a dog.");
+	   }
+	}
+
+	class Method_Overloading {
+	   public static void main(String[] args) {
+	      Dog4 d1 = new Dog4();
+	      d1.displayInfo();
+	   }
+	}
+
+
+package javasample.OO2;
+
+
+class Language {
+	  public void displayInfo() {
+	    System.out.println("Common English Language");
+	  }
+	}
+
+	class Java extends Language {
+	  @Override
+	  public void displayInfo() {
+	    System.out.println("Java Programming Language");
+	  }
+	}
+
+	class Polymorphism_using_methodoverriding {
+	  public static void main(String[] args) {
+
+	    // create an object of Java class
+	    Java j1 = new Java();
+	    j1.displayInfo();
+
+	    // create an object of Language class
+	    Language l1 = new Language();
+	    l1.displayInfo();
+	  }
+	}
+	
+	package javasample.OO2;
+
+class Animal3 {
+	  protected String name;
+
+	  protected void display() {
+	    System.out.println("I am an animal.");
+	  }
+	}
+
+	class Dog3 extends Animal3 {
+
+	  public void getInfo() {
+	    System.out.println("My name is " + name);
+	  }
+	}
+
+	class protected_Members_Inheritance {
+	  public static void main(String[] args) {
+
+	    // create an object of the subclass
+	    Dog3 labrador = new Dog3();
+
+	    // access protected field and method
+	    // using the object of subclass
+	    labrador.name = "Rocky";
+	    labrador.display();
+
+	    labrador.getInfo();
+	  }
+	}
+	
+	
+package javasample.OO2;
+
+class Animal2 {
+
+	  // method in the superclass
+	  public void eat() {
+	    System.out.println("I can eat");
+	  }
+	}
+
+	// Dog inherits Animal
+	class Dog2 extends Animal2 {
+
+	  // overriding the eat() method
+	  @Override
+	  public void eat() {
+
+	    // call method of superclass
+	    super.eat();
+	    System.out.println("I eat dog food");
+	  }
+
+	  // new method in subclass
+	  public void bark() {
+	    System.out.println("I can bark");
+	  }
+	}
+
+	class super_Keyword_Inheritance {
+	  public static void main(String[] args) {
+
+	    // create an object of the subclass
+	    Dog2 labrador = new Dog2();
+
+	    // call the eat() method
+	    labrador.eat();
+	    labrador.bark();
+	  }
+	}
+
+
+package javasample.OO2;
+
+class Animals {
+	   public void displayInfo() {
+	      System.out.println("I am an animal.");
+	   }
+	}
+
+	class Dogs extends Animals {
+	   public void displayInfo() {
+	      super.displayInfo();
+	      System.out.println("I am a dog.");
+	   }
+	}
+
+	class super_Keyword {
+	   public static void main(String[] args) {
+	      Dogs d1 = new Dogs();
+	      d1.displayInfo();
+	   }
+	}
+
+package javasample.OO2;
+
+
+
+
+class Pattern {
+
+	  // method without parameter
+	  public void display() {
+	    for (int i = 0; i < 10; i++) {
+	      System.out.print("*");
+	    }
+	  }
+
+	  // method with single parameter
+	  public void display(char symbol) {
+	    for (int i = 0; i < 10; i++) {
+	      System.out.print(symbol);
+	    }
+	  }
+	}
+
+	class Polymorphism_using_methodoverloading {
+	  public static void main(String[] args) {
+	    Pattern d1 = new Pattern();
+
+	    // call method without any argument
+	    d1.display();
+	    System.out.println("\n");
+
+	    // call method with a single argument
+	    d1.display('#');
+	  }
+	}package javasample.OO2;
+
+
+
+
+class Pattern {
+
+	  // method without parameter
+	  public void display() {
+	    for (int i = 0; i < 10; i++) {
+	      System.out.print("*");
+	    }
+	  }
+
+	  // method with single parameter
+	  public void display(char symbol) {
+	    for (int i = 0; i < 10; i++) {
+	      System.out.print(symbol);
+	    }
+	  }
+	}
+
+	class Polymorphism_using_methodoverloading {
+	  public static void main(String[] args) {
+	    Pattern d1 = new Pattern();
+
+	    // call method without any argument
+	    d1.display();
+	    System.out.println("\n");
+
+	    // call method with a single argument
+	    d1.display('#');
+	  }
+	}package javasample.OO2;
+
+
+
+
+class Pattern {
+
+	  // method without parameter
+	  public void display() {
+	    for (int i = 0; i < 10; i++) {
+	      System.out.print("*");
+	    }
+	  }
+
+	  // method with single parameter
+	  public void display(char symbol) {
+	    for (int i = 0; i < 10; i++) {
+	      System.out.print(symbol);
+	    }
+	  }
+	}
+
+	class Polymorphism_using_methodoverloading {
+	  public static void main(String[] args) {
+	    Pattern d1 = new Pattern();
+
+	    // call method without any argument
+	    d1.display();
+	    System.out.println("\n");
+
+	    // call method with a single argument
+	    d1.display('#');
+	  }
+	}
+	
+	package javasample.OO2;
+
+
+class ProgrammingLanguage {
+	  public void display() {
+	    System.out.println("I am Programming Language.");
+	  }
+	}
+
+	class Java1 extends ProgrammingLanguage {
+	  @Override
+	  public void display() {
+	    System.out.println("I am Object-Oriented Programming Language.");
+	  }
+	}
+
+	class Polymorphic_Variables  {
+	  public static void main(String[] args) {
+
+	    // declare an object variable
+	    ProgrammingLanguage pl;
+
+	    // create object of ProgrammingLanguage
+	    pl = new ProgrammingLanguage();
+	    pl.display();
+
+	    // create object of Java class
+	    pl = new Java1();
+	    pl.display();
+	  }
+	}
+	
+	
+	package javasample.OO2;
+
+
+class Area {
+
+	  // fields to calculate area
+	  int length;
+	  int breadth;
+
+	  // constructor to initialize values
+	  Area(int length, int breadth) {
+	    this.length = length;
+	    this.breadth = breadth;
+	  }
+
+	  // method to calculate area
+	  public void getArea() {
+	    int area = length * breadth;
+	    System.out.println("Area: " + area);
+	  }
+	}
+
+	class Java_Encapsulation {
+	  public static void main(String[] args) {
+
+	    // create object of Area
+	    // pass value of length and breadth
+	    Area rectangle = new Area(5, 6);
+	    rectangle.getArea();
+	  }
+	}
